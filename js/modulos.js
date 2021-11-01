@@ -1,4 +1,4 @@
-import {cambioColor, logo, logotipo, menu, slider, submenu, SubmenuDesktop } from "./app.js";
+import {menu,submenu,logotipo,logo,cambioColor,slider, SubmenuDesktop,funcionTestimonio} from "./app.js";
 
 menu()
 submenu()
@@ -7,6 +7,7 @@ logo()
 cambioColor()
 slider()
 SubmenuDesktop()
+funcionTestimonio()
 
 
 

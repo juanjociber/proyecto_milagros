@@ -124,7 +124,7 @@ export const slider =()=>{
     	i++;
     	if(i>=items.length)
     	i=0;
-    	estado=setTimeout(banner,4000);
+    	setTimeout(banner,4000);
 	}
 	banner()
 }
@@ -134,9 +134,7 @@ export const SubmenuDesktop=()=>{
 	const subMenu = document.querySelector('.submen')
 	const btnEntrenamiento = document.querySelector('#men--mod')
 	let mqMax767 = window.matchMedia('(max-width:767px)')
-
-	conta = 1    
-
+	
 	function mqSubmenu(mqMax767){
     	if(mqMax767.matches){
         	subMenu.style.display ='none'
@@ -151,3 +149,188 @@ export const SubmenuDesktop=()=>{
 
 
 
+/*===================================
+-> CREANDO TESTIMONIOS:
+=====================================*/
+export const funcionTestimonio=()=>{
+
+const testimonios=[
+    {   imgTestimonio:'img/persona1.jpg' ,
+        comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
+                      rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
+                      deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
+        nombre: 'Vania H.F.',
+        distrito: 'Los Olivos'},
+    {   imgTestimonio:'img/persona2.jpg' ,
+        comentario: `<i class='bx bxs-quote-alt-left comillas'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum voluptas est veniam. Neque
+                      rem atque dolore ratione amet nam, fugiat, tempora et necessitatibus consequatur odit? Et maiores
+                      deserunt illum molestiae. <i class='bx bxs-quote-alt-right comillas'></i>`,
+        nombre: 'André H.F.',
+        distrito: 'Los Olivos'}
+    ]
+
+let testimonioArray = Object.entries(testimonios);
+
+const $containerTestimonio = document.querySelector('.container-sliderTestimonio')
+const $sliderDiv = document.createElement('DIV')
+const $sliderTestBtnRigth = document.createElement('DIV')
+const $sliderTestBtnLeft = document.createElement('DIV')
+
+$sliderTestBtnRigth.classList.add('sliderTestimonio__btn')
+$sliderTestBtnRigth.classList.add('sliderTestimonio__btn--rigth')
+$sliderTestBtnRigth.id='btnTestimonio-right'
+$sliderTestBtnRigth.innerHTML=
+`<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
+    width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbbbbbe1" fill="none"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <polyline points="9 6 15 12 9 18" />
+</svg>`
+$sliderTestBtnLeft.classList.add('sliderTestimonio__btn')
+$sliderTestBtnLeft.classList.add('sliderTestimonio__btn--left')
+$sliderTestBtnLeft.id='btnTestimonio-left'
+$sliderTestBtnLeft.innerHTML=
+` <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44"
+    height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbbbbbe1" fill="none"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <polyline points="15 6 9 12 15 18" />
+</svg>`
+$sliderDiv.classList.add('sliderTestimonio')
+$sliderDiv.id='sliderTestimonio'
+
+$containerTestimonio.appendChild($sliderDiv)
+$containerTestimonio.appendChild($sliderTestBtnRigth)
+$containerTestimonio.appendChild($sliderTestBtnLeft)
+
+testimonioArray.forEach(function(e){
+    // console.log(e[1])
+    const $sliderSection = document.createElement('DIV')
+    const $imgSlider = document.createElement('IMG')
+    const $sliderContenido = document.createElement('DIV')
+    const $psliderComentario = document.createElement('P')
+    const $psliderNombre = document.createElement('P')
+    const $smallDistrito = document.createElement('SMALL')
+
+    $smallDistrito.textContent=e[1].distrito
+    $smallDistrito.classList.add('distrito')
+    $psliderNombre.textContent=e[1].nombre
+    $psliderNombre.classList.add('nombre')
+    $psliderComentario.classList.add('comentario')
+    $psliderComentario.innerHTML =e[1].comentario
+    $sliderSection.classList.add('sliderTestimonio__section')
+    $imgSlider.classList.add('sliderTestimonio__img')
+    $imgSlider.setAttribute('src',e[1].imgTestimonio)
+    $imgSlider.setAttribute('Alt','imagenTestimonio')
+    $sliderContenido.classList.add('sliderTestimonio__contenido')
+      
+    $sliderContenido.appendChild($psliderComentario)
+    $sliderContenido.appendChild($psliderNombre)
+    $sliderContenido.appendChild($smallDistrito)
+    $sliderSection.appendChild($imgSlider)
+    $sliderSection.appendChild($sliderContenido)
+    $sliderDiv.appendChild($sliderSection)
+});
+
+/**======================================
+ * -> EVENTO SLIDER TESTIMONIO
+ ========================================*/
+const $sliderTestimonio = document.querySelector('#sliderTestimonio');
+let $sliderSection = document.querySelectorAll('.sliderTestimonio__section');
+let $sliderSectionLast = $sliderSection[$sliderSection.length -1];
+
+const $btnLeft = document.querySelector('#btnTestimonio-left');
+const $btnRigth = document.querySelector('#btnTestimonio-right');
+
+$sliderTestimonio.insertAdjacentElement('afterbegin',$sliderSectionLast);
+
+function Next(){
+    let $sliderSectionFirst = document.querySelectorAll('.sliderTestimonio__section')[0];
+    $sliderTestimonio.style.marginLeft = '-200%';
+    $sliderTestimonio.style.transition = 'all 0.5s';
+    setTimeout(() => {  
+        $sliderTestimonio.style.transition = 'none';
+        $sliderTestimonio.insertAdjacentElement('beforeend',$sliderSectionFirst);
+        $sliderTestimonio.style.marginLeft = '-100%';
+    }, 500);
+}
+
+$btnRigth.addEventListener('click',function(){
+    Next();
+})
+
+function Prev(){
+    let $sliderSection = document.querySelectorAll('.sliderTestimonio__section');
+    let $sliderSectionLast = $sliderSection[$sliderSection.length -1];
+
+    $sliderTestimonio.style.marginLeft = '0';
+    $sliderTestimonio.style.transition = 'all 0.5s';
+    setTimeout(() => {  
+        $sliderTestimonio.style.transition = 'none';
+        $sliderTestimonio.insertAdjacentElement('afterbegin',$sliderSectionLast);
+        $sliderTestimonio.style.marginLeft = '-100%';
+    }, 500);
+}
+
+$btnLeft.addEventListener('click',function(){
+    Prev();
+})
+
+}
+
+/**======================================
+ * -> FORMULARIO
+ ========================================*/
+/**==============================================
+ * VALIDANDO Y LIMPIANDO FORMULARIO
+ ================================================*/
+ export const funcionValidarFormulario=()=>{
+
+	function validarFormulario(){
+		let nomForm = document.forms["formulario"]["nombre"].value;
+			if ( nomForm == null || nomForm == "" || nomForm.length == 0  || /^\s+$/.test(nomForm) || !isNaN(nomForm) ) {
+			const $nombre = document.querySelector('#idMNombre')
+			$nombre.classList.add('msj-formulario')
+			mostrarMensaje($nombre)
+			$nombre.innerHTML='El campo es obligatorio y solo texto'
+			removeMensaje($nombre)
+			document.querySelector("#nombre").focus();
+			return false;
+		}
+	
+		let apeForm = document.forms["formulario"]["apellido"].value;
+			if ( apeForm == null || apeForm == "" || apeForm.length == 0  || /^\s+$/.test(apeForm) || !isNaN(apeForm) ) {
+			const $apellido = document.querySelector('#idMApellido')
+			$apellido.classList.add('msj-formulario')
+			mostrarMensaje($apellido)
+			$apellido.innerHTML='El campo es obligatorio y solo texto'
+			removeMensaje($apellido)
+			document.querySelector("#apellido").focus();
+			return false;
+		}
+	
+		let emailForm = document.forms["formulario"]["email"].value;
+			if( emailForm== null || emailForm == "" || emailForm.length == 0 || (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(emailForm)) || !isNaN(emailForm)) {
+			const $mail = document.querySelector('#idMEmail')
+			$mail.classList.add('msj-formulario')
+			mostrarMensaje($mail)
+			$mail.innerHTML='El campo es obligatorio y formato establecido'
+			removeMensaje($mail)
+			document.querySelector("#email").focus();
+			return false;
+		}
+	
+		let celularForm = document.forms["formulario"]["celular"].value;
+			if( isNaN(celularForm) || celularForm == null || celularForm == "" || celularForm.length == 0 || /^\s+$/.test(celularForm)){
+			const $celular = document.querySelector('#idMCelular')
+			$celular.classList.add('msj-formulario')
+			mostrarMensaje($celular)
+			$celular.innerHTML='El campo es obligatorio y solo número'
+			removeMensaje($celular)
+			document.querySelector("#celular").focus();
+			return false;
+		}
+	}
+	validarFormulario();
+ }
+ 
