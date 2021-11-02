@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/formulario.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/filtro.css">
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +20,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
         rel="stylesheet">
-    
-   
-
-
+             
 </head>
 
 <body>
@@ -103,16 +102,16 @@
 
     <main>
 
-        <section class="section-container">
+        <section class="section-1 contenedor">
             <h2 class="subtitle">Nosotros</h2>
-            <div class="column column-left">
+            <div class="column-left">
                 <div class="rount-picture">
                     <div class="picture">
                         <img src="img/imagen1.jpg" alt="imagen">
                     </div>
                 </div>
             </div>
-            <div class="column column-right">
+            <div class="column-right">
                 <div class="text-container">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
                         ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
@@ -126,15 +125,15 @@
             </div>
             <div class="list-container">
                 <ul class="items-list">
-                    <li class="item-list">Marketing Strategy</li>
-                    <li class="item-list">Decision & Risk Analytic</li>
-                    <li class="item-list">Organization & Decision</li>
-                    <li class="item-list">Banking & Capital Market</li>
+                    <li class="item-list"><i class='bx bx-check-square'></i>Marketing Strategy</li>
+                    <li class="item-list"><i class='bx bx-check-square'></i>Decision & Risk Analytic</li>
+                    <li class="item-list"><i class='bx bx-check-square'></i>Organization & Decision</li>
+                    <li class="item-list"><i class='bx bx-check-square'></i>Banking & Capital Market</li>
                 </ul>
             </div>
         </section>
 
-        <section class="section-container">
+        <section class="section-2">
             <h2 class="subtitle">Nuestros Servicios</h2>
             <div class="top-container">
                 <div class="text-container">
@@ -143,115 +142,133 @@
                         Enim repellendus officia voluptatibus!</p>
                 </div>
             </div>
-            <div class="bottom-container">
-                    <div class="box-container">
-                        <div class="icon-container">
-                            <i class='bx bxs-shopping-bag' ></i>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Business Services</a>
-                        </div>
-                        <div class="text-container pad-left-0">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
-                                ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
-                                Enim repellendus officia voluptatibus!</p>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Leer más</a>
-                        </div>
-                    </div>
-                    <div class="box-container">
-                        <div class="icon-container">
-                            <i class='bx bxs-shopping-bag' ></i>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Business Services</a>
-                        </div>
-                        <div class="text-container pad-left-0">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
-                                ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
-                                Enim repellendus officia voluptatibus!</p>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Leer más</a>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="item-carousel" >
+                        <div class="box-container w-100 h-100" style="margin: 0;">
+                            <div class="icon-container">
+                                <i class='bx bxs-shopping-bag' ></i>
+                            </div>
+                            <div class="link-container" style="padding: 0.5rem;">
+                                <a href="#">Business Services</a>
+                            </div>
+                            <div class="text-container">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
+                                    ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
+                                    Enim repellendus officia voluptatibus!</p>
+                            </div>
+                            <div class="link-container">
+                                <a href="#">Leer más</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="box-container">
-                        <div class="icon-container">
-                            <i class='bx bxs-shopping-bag' ></i>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Business Services</a>
-                        </div>
-                        <div class="text-container pad-left-0">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
-                                ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
-                                Enim repellendus officia voluptatibus!</p>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Leer más</a>
+                    <div class="item-carousel">
+                        <div class="box-container w-100 h-100" style="margin: 0;">
+                            <div class="icon-container">
+                                <i class='bx bxs-shopping-bag' ></i>
+                            </div>
+                            <div class="link-container" style="padding: 0.5rem;">
+                                <a href="#">Business Services</a>
+                            </div>
+                            <div class="text-container">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
+                                    ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
+                                    Enim repellendus officia voluptatibus!</p>
+                            </div>
+                            <div class="link-container">
+                                <a href="#">Leer más</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="box-container">
-                        <div class="icon-container">
-                            <i class='bx bxs-shopping-bag' ></i>
+                    <div class="item-carousel">
+                        <div class="box-container w-100 h-100" style="margin: 0;">
+                            <div class="icon-container">
+                                <i class='bx bxs-shopping-bag' ></i>
+                            </div>
+                            <div class="link-container" style="padding: 0.5rem;">
+                                <a href="#">Business Services</a>
+                            </div>
+                            <div class="text-container">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
+                                    ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
+                                    Enim repellendus officia voluptatibus!</p>
+                            </div>
+                            <div class="link-container">
+                                <a href="#">Leer más</a>
+                            </div>
                         </div>
-                        <div class="link-container">
-                            <a href="#">Business Services</a>
-                        </div>
-                        <div class="text-container pad-left-0">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
-                                ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
-                                Enim repellendus officia voluptatibus!</p>
-                        </div>
-                        <div class="link-container">
-                            <a href="#">Leer más</a>
+                    </div>
+                    <div class="item-carousel">
+                        <div class="box-container w-100 h-100" style="margin: 0;">
+                            <div class="icon-container">
+                                <i class='bx bxs-shopping-bag' ></i>
+                            </div>
+                            <div class="link-container" style="padding: 0.5rem;">
+                                <a href="#">Business Services</a>
+                            </div>
+                            <div class="text-container">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
+                                    ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
+                                    Enim repellendus officia voluptatibus!</p>
+                            </div>
+                            <div class="link-container">
+                                <a href="#">Leer más</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </section>
-        
-        <section class="section-container">
-            <h2 class="subtitle">Nuestro Portafolio</h2>
-            <div class="top-container">
-                <div class="text-container">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
-                        ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
-                        Enim repellendus officia voluptatibus!</p>
-                </div>
-            </div>
-            <div class="link-portafolio-container">
-                <ul class="items-link-portafolio">
-                    <li class="item-link-portafolio">Todos</li>
-                    <li class="item-link-portafolio">Tema1</li>
-                    <li class="item-link-portafolio">Tema2</li>
-                    <li class="item-link-portafolio">Tema3</li>
-                    <li class="item-link-portafolio">Tema4</li>
-                </ul>
-                <div class="items-portafolio">
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
-                    <div class="item-portafolio">
-                        <img src="img/img2.jpg" alt="imagen-portafolio">
-                    </div>
+                <div class="botones">
+                    <i class='bx bx-chevron-left botonIzquierda' id='prev'></i>
+                    <i class='bx bx-chevron-right botonDerecha' id='next'></i>
                 </div>
             </div>
         </section>
 
-        <section class="section-container" id="testimonio">
+        <!--PARALLAX-->
+        <div class="parallax">
+            <div class="fondo-parallax" id="parallaxOne">
+                <p class="fondo-parallax__texto" id="idparallax-texto"></p>
+            </div>
+        </div>
+        
+        <section class="section-3">
+            <h2 class="subtitle">Nuestros Proyectos</h2>
+                <div class="top-container">
+                    <div class="text-container">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
+                        ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
+                        Enim repellendus officia voluptatibus!</p>
+                    </div>
+                </div>
+                <div class="wrap contenedor">
+                    <form action="" class="formulario">
+                        <input type="radio" name="filtro" id="todo" checked>
+                        <label for="todo">Todos</label>
+                        <input type="radio" name="filtro" id="amarillo">
+                        <label for="amarillo">Amarillo</label>
+                        <input type="radio" name="filtro" id="verde">
+                        <label for="verde">Verde</label>
+                        <input type="radio" name="filtro" id="azul">
+                        <label for="azul">Azul</label>
+                                               
+                        <div id="imagenes" class="imagenes">
+                            <img class="borde-amarillo amarillo" src="img/silla1.jpg" alt="">
+                            <img class="borde-azul azul" src="img/silla9.jpg" alt="">
+                            <img class="borde-verde verde" src="img/silla5.jpg" alt="">
+                            <img class="borde-amarillo amarillo" src="img/silla3.jpg" alt="">
+                            <img class="borde-verde verde" src="img/silla6.jpg" alt="">
+                            <img class="borde-azul azul" src="img/silla7.jpg" alt="">
+                            <img class="borde-amarillo amarillo" src="img/silla2.jpg" alt="">
+                            <img class="borde-azul azul" src="img/silla8.jpg" alt="">
+                            <img class="borde-verde verde" src="img/silla4.jpg" alt="">
+                        </div>
+                    </form>
+                </div>
+        </section>
+
+        
+
+        <section class="section-4" id="testimonio">
             <h2 class="subtitle">Testimoniales</h2>
             <div class="top-container">
                 <div class="text-container">
@@ -260,13 +277,20 @@
                         Enim repellendus officia voluptatibus!</p>
                 </div>
             </div>
-            <div class="container-sliderTestimonio"><!-- Testimonio desarrollado en js --></div>
+            <div class="container-sliderTestimonio contenedor" style="background-color:white;"><!-- Testimonio desarrollado en js --></div>
         </section>
 
-        <section class="section-container">
-            <h2 class="filtrado">Contáctenos</h2>
+        <!--PARALLAX-->
+        <div class="parallax">
+            <div class="fondo-parallax" id="parallaxOne">
+                <p class="fondo-parallax__texto" id="idparallax-texto"></p>
+            </div>
+        </div>
+
+        <section class="section-5">
+            <h2 class="filtrado subtitle">Contáctenos</h2>
             <div class="contactenos-formulario contenedor">
-                <form class="formulario contenedor animado" name="formulario">
+                <form class="formulario formulario-mod contenedor animado" name="formulario">
                     <div class="contenedor-campos">
                         <div class="campo">
                             <div class="input-icon">
@@ -316,8 +340,6 @@
         </section>
     </main>
 
-    
-
     <footer>
         <div class="footer-informe">
             <div class="fondo-footer">
@@ -358,15 +380,9 @@
         </div>
     </footer>
 
-
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
-
-
 </body>
-
 </html>

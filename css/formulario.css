@@ -197,7 +197,22 @@ input[type="tel"]{
   .form-contactenos{
       grid-column: 1 / 3;
   }
+  .formulario-mod{
+    width: 60% !important;
+    border: 1px solid rgba(128, 128, 128, 0.429);
+  }
 }
+@media(min-width:768px){
+   .formulario-mod{
+    width: 50% !important;
+  }
+}
+@media(min-width:1200px){
+  .formulario-mod{
+   width: 40% !important;
+ }
+}
+
 #idMNombre,
 #idMApellido,
 #idMEmail,
