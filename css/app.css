@@ -39,9 +39,8 @@ img{
 }
 .text-container{
     text-align: justify;
-    padding-left:0.5rem;
-    padding-right: 0.5rem;
     margin-bottom: 1.5rem;
+    color: #6f6f6f;
 }
 .pad-left-0{
     padding-left: 0;
@@ -63,7 +62,7 @@ h2{
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     margin-top: 0;
-    color: #3b3b3b;
+    color: #545454;
 }
 p{
     margin: 0;
@@ -417,15 +416,6 @@ p{
 
 }
 
-
-
-
-main{
-    border: 2px solid blue;
-}
-
-
-
 /*===== LOGO-MENÚ RESPONSIVE =====*/
 .logo-men-responsive{
     margin-bottom: 2rem;
@@ -587,10 +577,11 @@ main{
 }
 
 /*==============================
--> SECTION 02
+-> SECTION 02: SERVICIOS
 ================================*/
 .section-2{
-    background:linear-gradient(120deg, #fdfbfbea 0%, #ebedeecd 100%);
+    /* background:linear-gradient(120deg, #fdfbfbea 0%, #ebedeecd 100%); */
+    background-color: #f7f7f7;
     padding: 12rem 0;
     overflow: hidden;
 }
@@ -602,14 +593,30 @@ main{
 }
 .box-container{
     /* border: 1px solid red; */
-    margin: 0 2rem;
+    /* margin: 0 2rem; */
     width: 100%;
     background-color: var(--bg-white);
+    padding: 4rem;
 }
-.icon-container{
-    font-size: 3rem;
-    padding: 1rem;
+.icon-container i{
+    font-size: 5rem;
+    color: var(--bg-red);
+    margin: 2rem 0;
+    padding: 2rem;
 }
+.link-container{
+    margin-bottom: 2rem;
+}
+.link-container a{
+    color: #3b3b3b;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.link-container--mod a{
+    color: #6f6f6f;
+    text-transform: uppercase;
+}
+
 @keyframes slider{
     0%{margin-left: 0;}
     20%{margin-left: 0;}
