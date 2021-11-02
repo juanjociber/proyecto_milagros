@@ -334,3 +334,21 @@ $btnLeft.addEventListener('click',function(){
 	validarFormulario();
  }
  
+
+export const funcionFlechas=()=>{
+	let flechaizq = document.querySelector('#prev')
+        let flechader = document.querySelector('#next')
+
+        flechaizq.addEventListener("click",function(e){
+            console.log(e)
+            let contenedor = document.querySelector(".carousel")
+            contenedor.scrollLeft -= 100;
+        })
+        flechader.addEventListener("click",function(e){
+            console.log(e)
+            let contenedor = document.querySelector(".carousel")
+            contenedor.scrollLeft += 100;
+    })
+}
+        
+
