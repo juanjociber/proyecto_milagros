@@ -551,6 +551,7 @@ p{
     display: flex;
     font-size: 1.5rem;
     padding: 1rem 0;
+    color: #444444;
 }
 .item-list i{
     color: var(--bg-red);
@@ -584,6 +585,9 @@ p{
     background-color: #f7f7f7;
     padding: 12rem 0;
     overflow: hidden;
+}
+.top-container{
+    margin: 0 4rem 4rem 4rem;
 }
 .bottom-container{
     /* border: 1px solid blue; */
@@ -746,20 +750,22 @@ p{
     margin-bottom: 2rem;
 }
 .sliderTestimonio__contenido .comillas{
-    color: rgb(88, 86, 86);
+    color: var(--bg-red);
 }
 .sliderTestimonio__contenido .comentario{
     text-align: center;
     margin: 1rem auto 2rem auto;
     line-height: 1.5;
+    color:#7b7b7b;
 }
 .sliderTestimonio__contenido .nombre{
     font-weight: 800;
     text-transform: uppercase;
+    color: #4e4e4e;
 }
 .sliderTestimonio__contenido .distrito{
     font-weight: 500;
-    color: var(--bg-black-firstChildren-opacity);
+    color: #6f6f6f;
 }
 .sliderTestimonio__section{
     width: 100%;
