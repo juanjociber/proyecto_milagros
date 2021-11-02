@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/filtro.css">
+   
     
 
     <meta charset="UTF-8">
@@ -20,7 +21,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
         rel="stylesheet">
-             
+        
 </head>
 
 <body>
@@ -106,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="column-right">
+            <div class="top-container">
                 <div class="text-container">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
                         ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
@@ -118,7 +119,7 @@
                         Enim repellendus officia voluptatibus!</p>
                 </div>
             </div>
-            <div class="list-container">
+            <div class="top-container">
                 <ul class="items-list">
                     <li class="item-list"><i class='bx bx-check-square'></i>Marketing Strategy</li>
                     <li class="item-list"><i class='bx bx-check-square'></i>Decision & Risk Analytic</li>
@@ -233,6 +234,7 @@
                 </div>
                 <div class="wrap contenedor">
                     <form action="" class="formulario">
+                    
                         <input type="radio" name="filtro" id="todo" checked>
                         <label for="todo">Todos</label>
                         <input type="radio" name="filtro" id="amarillo">
@@ -241,17 +243,35 @@
                         <label for="verde">Verde</label>
                         <input type="radio" name="filtro" id="azul">
                         <label for="azul">Azul</label>
-                                               
+                        
                         <div id="imagenes" class="imagenes">
-                            <img class="borde-amarillo amarillo" src="img/silla1.jpg" alt="">
-                            <img class="borde-azul azul" src="img/silla9.jpg" alt="">
-                            <img class="borde-verde verde" src="img/silla5.jpg" alt="">
-                            <img class="borde-amarillo amarillo" src="img/silla3.jpg" alt="">
-                            <img class="borde-verde verde" src="img/silla6.jpg" alt="">
-                            <img class="borde-azul azul" src="img/silla7.jpg" alt="">
-                            <img class="borde-amarillo amarillo" src="img/silla2.jpg" alt="">
-                            <img class="borde-azul azul" src="img/silla8.jpg" alt="">
-                            <img class="borde-verde verde" src="img/silla4.jpg" alt="">
+                            <div class="img-container">
+                                <img class="borde-amarillo amarillo" src="img/silla1.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-azul azul" src="img/silla9.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-verde verde" src="img/silla5.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-amarillo amarillo" src="img/silla3.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-verde verde" src="img/silla6.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-azul azul" src="img/silla7.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-amarillo amarillo" src="img/silla2.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-azul azul" src="img/silla8.jpg" alt="imagen">
+                            </div>
+                            <div class="img-container">
+                                <img class="borde-verde verde" src="img/silla4.jpg" alt="imagen">
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -373,6 +393,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
 </body>
