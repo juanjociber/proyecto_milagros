@@ -12,27 +12,26 @@
 	grid-auto-flow: column;
 	gap: 4rem;
 	margin: 0 3rem;
-	/* overflow-x: hidden; */
 	overflow: auto;
-	color: black;
+	/* color: rgb(208, 32, 32); */
 	scroll-behavior: smooth;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
 	/* border: 3px solid green; */ 
 	scrollbar-color: rgba(243, 240, 240, 0.115) rgba(252, 248, 248, 0);
-	scrollbar-width: thin;
-	scroll-snap-type: x mandatory;
+	/* scrollbar-width: thin; */
+	/* scroll-snap-type: x mandatory; */
+}
+@media(min-width:768px){
+	.carousel{
+		overflow: hidden;
+	}
 }
 .item-carousel{
-	/* background-color: darkorchid; */
-	/* width: 33.5rem; */
 	width: 78.5vw;
 	height: 110vw;
-	/* border: 3px solid red; */
-	/* margin-right: 2rem; */
 	margin: 0 auto;
-	
 }
 @media(min-width:482px){
 	.item-carousel{
@@ -79,32 +78,41 @@
 /* .item-carousel:nth-child(2n){
 	background-color: brown;
 } */
-.botonIzquierda,.botonDerecha{
-	font-size: 6rem;
-	position: absolute;
-	top: 41%;
-	color: rgb(154, 154, 154);
-	transition: font-size ease .2s, transform ease .2s;
+.botones{
+	display: none;
 }
-.botonIzquierda:hover,.botonDerecha:hover{
-	font-size: 5.5rem;
-	color: var(--bg-red);
-	
+@media(min-width:768px){
+	.botones{
+		display: block;
+	}
+	.botonIzquierda,.botonDerecha{
+		font-size: 6rem;
+		position: absolute;
+		top: 41%;
+		color: rgb(154, 154, 154);
+		transition: font-size ease .2s, transform ease .2s;
+	}
+	.botonIzquierda:hover,.botonDerecha:hover{
+		font-size: 5.5rem;
+		color: var(--bg-red);
+		
+	}
+	.botonIzquierda:active,.botonDerecha:active{
+		transform: scale(.91);
+	}
+	.botonIzquierda{
+		left: -14%;
+		color: #f7173550;
+		transition: color 0.3s ease, transform ease .2s,font-size ease .2s;
+	}
+	.botonDerecha{
+		right: -14%;
+		color: #f7173550;
+		transition: color 0.3s ease, transform ease .2s,font-size ease .2s;
+	}
 }
-.botonIzquierda:active,.botonDerecha:active{
-	transform: scale(.91);
-}
-.botonIzquierda{
-	left: -14%;
-	color: #f7173550;
-	transition: color 0.3s ease, transform ease .2s,font-size ease .2s;
-}
-.botonDerecha{
-	right: -14%;
-	color: #f7173550;
-	transition: color 0.3s ease, transform ease .2s,font-size ease .2s;
-}
-@media(min-width:482px){
+
+/* @media(min-width:482px){
 	.botonIzquierda{
 		left: -12%;
 	}
@@ -119,7 +127,7 @@
 	.botonDerecha{
 		right: -9.5%;
 	}	
-}
+}*/
 @media(min-width:768px){
 	.botonIzquierda{
 		left: -7%;
@@ -127,7 +135,7 @@
 	.botonDerecha{
 		right: -7%;
 	}	
-}
+} 
 @media(min-width:992px){
 	.botonIzquierda{
 		left: -5%;
