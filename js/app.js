@@ -350,5 +350,4 @@ export const funcionFlechas=()=>{
             contenedor.scrollLeft += 100;
     })
 }
-        
-
+  
