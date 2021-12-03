@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/filtro.css">
-   
-    
+     <link rel="stylesheet" href="css/slider.css"> 
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +20,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&display=swap"
         rel="stylesheet">
-        
-</head>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+ </head>
 
 <body>
+   <!--
     <header class="header">
         <div class="header-fondo">
             <div class="header-top">
@@ -94,20 +97,99 @@
                 <img src="img/banner1.jpg" alt="imagen banner" id="slider">
             </div>
         </div>
+    </header>-->
+
+    <header id="header">
+        <a href="#" class="brand">Logo</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Servicios</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Contáctenos</a>
+            </div>
+        </div>
     </header>
+    <section class="home" id="imagen">
+        <img class="imagen__slide active" src="./img/banner1.jpg" alt="">
+        <img class="imagen__slide" src="./img/banner2.jpg" alt="">
+        <img class="imagen__slide" src="./img/banner3.jpg" alt="">
+        <img class="imagen__slide" src="./img/banner1.jpg" alt="">
+        <img class="imagen__slide" src="./img/banner2.jpg" alt="">
+
+        <div class="content active">
+            <h1>Home<br><span>subtitulo1</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi incidunt animi odio et placeat, mollitia magnam deleniti 
+                dolore quam expedita explicabo eum tempore quos! Ad dolorum odio 
+                saepe quis praesentium.</p>
+                <a href="#">read More</a>
+        </div>
+        <div class="content">
+            <h1>Nosotros<br><span>subtitulo2</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi incidunt animi odio et placeat, mollitia magnam deleniti 
+                dolore quam expedita explicabo eum tempore quos! Ad dolorum odio 
+                saepe quis praesentium.</p>
+                <a href="#">read More</a>
+        </div>
+        <div class="content">
+            <h1>Servicios<br><span>subtitulo3</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi incidunt animi odio et placeat, mollitia magnam deleniti 
+                dolore quam expedita explicabo eum tempore quos! Ad dolorum odio 
+                saepe quis praesentium.</p>
+                <a href="#">read More</a>
+        </div>
+        <div class="content">
+            <h1>Proyectos<br><span>subtitulo4</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi incidunt animi odio et placeat, mollitia magnam deleniti 
+                dolore quam expedita explicabo eum tempore quos! Ad dolorum odio 
+                saepe quis praesentium.</p>
+                <a href="#">read More</a>
+        </div>
+        <div class="content">
+            <h1>Contáctenos<br><span>subtitulo5</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Sequi incidunt animi odio et placeat, mollitia magnam deleniti 
+                dolore quam expedita explicabo eum tempore quos! Ad dolorum odio 
+                saepe quis praesentium.</p>
+                <a href="#">read More</a>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+
+    </section>
+
+
+
+
 
     <main>
-
         <section class="section-1 contenedor">
             <h2 class="subtitle">Nosotros</h2>
             <div class="column-left">
                 <div class="rount-picture">
-                    <div class="picture">
-                        <img src="img/imagen1.jpg" alt="imagen">
+                    <div class="picture .animate__animated .animate__backInDown">
+                        <img class="picture__imagen" src="img/imagen1.jpg" alt="imagen">
                     </div>
                 </div>
             </div>
-            <div class="top-container">
+            <div class="top-container top-grid1">
                 <div class="text-container">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores eos voluptatem aliquam molestiae
                         ducimus voluptatum asperiores quos accusamus, libero quis ipsa laboriosam ex odit aliquid adipisci?
@@ -119,7 +201,7 @@
                         Enim repellendus officia voluptatibus!</p>
                 </div>
             </div>
-            <div class="top-container">
+            <div class="top-container top-grid2">
                 <ul class="items-list">
                     <li class="item-list"><i class='bx bx-check-square'></i>Marketing Strategy</li>
                     <li class="item-list"><i class='bx bx-check-square'></i>Decision & Risk Analytic</li>
@@ -245,8 +327,16 @@
                         <label for="azul">Azul</label>
                         
                         <div id="imagenes" class="imagenes">
+
+                            
                             <div class="img-container">
                                 <img class="borde-amarillo amarillo" src="img/silla1.jpg" alt="imagen">
+                                <div class="titulo">
+                                    <h4>Titulo 1</h4>
+                                    <div class="link">
+                                        <i class='bx bx-link'></i>
+                                    </div>
+                                </div>
                             </div>
                             <div class="img-container">
                                 <img class="borde-azul azul" src="img/silla9.jpg" alt="imagen">
@@ -391,10 +481,79 @@
         </div>
     </footer>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script src="js/modulos.js" type="module"></script>
     <script src="js/no-modulos.js" nomodule></script>
+
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation")
+
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+            navigation.style.transition="4s ease";
+        })
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".imagen__slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            })
+            slides.forEach((slide)=>{
+                slide.classList.remove("active");
+            })
+            contents.forEach((content)=>{
+                content.classList.remove("active");
+            })
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            })
+            
+        });
+
+
+
+/**=======================================================
+ *              NAVEGACIÓN ESTÁTICA
+ =========================================================*/
+ document.addEventListener('DOMContentLoaded', function() {
+    navegacionFija();
+
+});
+function navegacionFija() {
+    const barra = document.querySelector('#header');
+    //const $search = document.querySelector('#buscador')
+    // Registrar el Intersection Observer
+    const observer = new IntersectionObserver( function(entries) {
+        if(entries[0].isIntersecting) {
+            console.log(barra)
+            //console.log($search)
+            barra.classList.remove('fijo')
+            //$search.classList.remove('fijoBuscador')
+        } else {
+            barra.classList.add('fijo')
+            //$search.classList.add('fijoBuscador')
+        }
+    });
+    // Elemento a observar
+    observer.observe(document.querySelector('#imagen'));
+};
+
+    </script>
+
 </body>
 </html>
