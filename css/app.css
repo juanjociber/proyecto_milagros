@@ -146,7 +146,7 @@ p{
 -> NAV
 ============================*/
 .nav{
-    width: 82%;
+    width: 29em;
     height: 100%;
     background: var(--bg-white);
     display: flex;
