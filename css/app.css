@@ -112,7 +112,7 @@ p{
 -> NAV
 ============================*/
 .nav{
-    max-width: 80%;
+    max-width: 79.2%;
     height: 100%;
     background: var(--bg-white);
     display: flex;
