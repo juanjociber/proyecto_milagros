@@ -101,14 +101,33 @@
 
     <header id="header">
         <a href="#" class="brand">Logo</a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-            <div class="navigation-items">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Servicios</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Contáctenos</a>
+        <div class="navegacion">
+            <nav class="nav" id="nav">
+                <ul class="men">
+                    <div class="logo-men-responsive">
+                        <a href="index.html"><img src="" alt="logo empresa"></a>
+                    </div>
+                    <li><a href="index.html" class="selected">Inicio</a></li>
+                    <li><a href="#">Nosotros</a>
+                    <li class="men__enlace--mod"><a class="btn-submenu" href="#">Servicios</a>
+                        <i class='bx bx-chevron-down' id="ico-submenu"></i>
+                        <ul class="submen">
+                            <li><a href="#">Servicio 1</a></li>
+                            <li><a href="#">Servicio 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contenedor-btnmenu">
+            <div class="btnMenu" id="btnMenu">Menú
+                <button class="button">
+                    <span class="top-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -184,7 +203,7 @@
             <h2 class="subtitle">Nosotros</h2>
             <div class="column-left">
                 <div class="rount-picture">
-                    <div class="picture .animate__animated .animate__backInDown">
+                    <div class="picture">
                         <img class="picture__imagen" src="img/imagen1.jpg" alt="imagen">
                     </div>
                 </div>
@@ -490,14 +509,13 @@
 
 
     <script type="text/javascript">
-        const menuBtn = document.querySelector(".menu-btn");
+        /*const menuBtn = document.querySelector(".menu-btn");
         const navigation = document.querySelector(".navigation")
 
         menuBtn.addEventListener("click",()=>{
             menuBtn.classList.toggle("active");
             navigation.classList.toggle("active");
-            navigation.style.transition="4s ease";
-        })
+        })*/
 
         const btns = document.querySelectorAll(".nav-btn");
         const slides = document.querySelectorAll(".imagen__slide");
@@ -536,24 +554,19 @@
 });
 function navegacionFija() {
     const barra = document.querySelector('#header');
-    //const $search = document.querySelector('#buscador')
-    // Registrar el Intersection Observer
     const observer = new IntersectionObserver( function(entries) {
         if(entries[0].isIntersecting) {
             console.log(barra)
-            //console.log($search)
             barra.classList.remove('fijo')
-            //$search.classList.remove('fijoBuscador')
         } else {
             barra.classList.add('fijo')
-            //$search.classList.add('fijoBuscador')
         }
     });
     // Elemento a observar
     observer.observe(document.querySelector('#imagen'));
 };
 
-    </script>
+</script>
 
 </body>
 </html>

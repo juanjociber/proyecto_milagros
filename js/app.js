@@ -12,7 +12,7 @@ export const menu = ()=>{
 
 	let contador = 1;
 
-	$btnMenu.onclick = function () {
+	$btnMenu.onclick = function (e) {
 		if (contador == 1) {
 			$nav.style='left:0%; transition: all .6s'
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
@@ -65,7 +65,7 @@ export const submenu = ()=>{
 /**==============================================
  * -> LOGOTIPO
  ================================================*/
-export const logotipo = () =>{
+/*export const logotipo = () =>{
 	const $logoContenedor = document.querySelector('.logo'),
     	  $imgLogotipo = document.querySelector('.logo__imagen'),
     	  $cambioLogo = matchMedia('(min-width:992px)')
@@ -77,7 +77,7 @@ export const logotipo = () =>{
 	}
 	$cambioLogo.addListener(changeSize)
 	changeSize($cambioLogo);
-}
+}*/
 
 // /**==============================================
 //  * ->EVENTO BANNER
