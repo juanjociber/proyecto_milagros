@@ -157,10 +157,10 @@ input[type="tel"]{
 }
 @keyframes shadow-pulse {
   0% {
-    box-shadow: 0 0 0 0 #aa2436af;
+    box-shadow: 0 0 0 0 #7e7e7eaf;
   }
   100% {
-    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    box-shadow: 0 0 8px 16px rgba(88, 95, 94, 0);
   }
 }
 .input-btn{
