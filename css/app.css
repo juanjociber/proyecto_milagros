@@ -1,12 +1,14 @@
 :root{
-    --bg-red: #f71735;
+    /* --bg-red: #f71735; */
     --bg-white: #ffffff;
     --bg-black: #000000;
     --col-text-titulo: #444444;
     --fontOne:'Montserrat', sans-serif;
     --fontTwo:'Poppins', sans-serif;
 }
-/*=======reset========*/
+/*==============================
+-> RESET GLOBAL
+================================*/
 html{
     box-sizing: border-box;
     font-size: 62.5%;
@@ -23,7 +25,9 @@ body{
     font-family: var(--fontTwo);
     min-height: 100%;
 }
-/**Globales**/
+/*==================================
+-> GLOBALES
+====================================*/
 .contenedor{
     width: min(95%, 120rem);
     margin: 1rem auto;
@@ -68,49 +72,12 @@ p{
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.5;
-
-    
 }
 /*===============================
 -> HEADER
 =================================*/
-.header{
-    position: relative;
-    /* width: 200%; */
-    height: 50rem;
-    overflow:hidden; 
-}
-.header-fondo{
-    position: absolute;
-    background-color: rgb(0 0 0 / 75%);
-    width: 100%;
-    /* height: 100%; */
-}
-.header-top{
-    display: flex;
-    justify-content: space-between;
-}
-.banner img{
-    border: 5px solid blue;
-    
-}
-@media(min-width:992px){
-    .header{
-        background: transparent;
-        width: 100%;
-        height: 60vw;
-    }
-    .header-top{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.055);
-        padding: 0 10%;
-    }
-}
-@media(min-width:1200px){
-    .header{
-        width: 100%;
-        height:65vw;
-    }
-}
+
+
 /*=========================
 ->  DIV LOGO 
 ===========================*/
@@ -133,7 +100,6 @@ p{
     position: fixed;
     background: rgba(0, 0, 0, 0.295);
     z-index: 4;
-    /* border: 2px solid yellow; */
 }
 @media(min-width:992px){
     .navegacion{
@@ -146,7 +112,7 @@ p{
 -> NAV
 ============================*/
 .nav{
-    width: 77%;
+    max-width: 80%;
     height: 100%;
     background: var(--bg-white);
     display: flex;
@@ -154,24 +120,44 @@ p{
     align-items: center;
     box-shadow: inset 0 0 0 1px rgb(0 0 0 / 15%), inset 0 0 6px rgb(0 0 0 / 20%);
 }
-/* @media(min-width:334px){
+@media(min-width:400px){
     .nav{
-        width: 87%;
-    }
-}
-@media(min-width:480px){
-    .nav{
-        width: 90%;
+        max-width: 84%;
     }
 }
 @media(min-width:576px){
     .nav{
-        width: 92.2%;
+        max-width: 87%;
+    }
+}
+@media(min-width:620px){
+    .nav{
+        max-width: 88%;
+    }
+}
+@media(min-width:665px){
+    .nav{
+        max-width: 89%;
     }
 }
 @media(min-width:768px){
     .nav{
-        width: 94%;
+        max-width: 90%;
+    }
+}
+@media(min-width:820px){
+    .nav{
+        max-width: 91%;
+    }
+}
+@media(min-width:900px){
+    .nav{
+        max-width: 91.5%;
+    }
+}
+@media(min-width:945px){
+    .nav{
+        max-width: 92%;
     }
 }
 @media(min-width:992px){
@@ -181,7 +167,7 @@ p{
         padding-right: 2rem;
         background-color: transparent;
     }
-} */
+}  
 /*====================
 -> UL: MEN - SUBMEN
 ======================*/
@@ -221,25 +207,31 @@ p{
     width:100%;
 }
 @media(max-width:992px){
+    .men li a{
+        color: #424141;
+        transition: font-weight .2s ease;
+    }
     .men li:hover a{
         letter-spacing: 1.1px;
-        font-weight: 600;
-        /* position: relative; */
+        font-weight: 520;
     }
-    .men li a::before{
+    .logo-men-responsive a{
+        text-align: center;
+    }
+    /* .men li a::before{
         content: "";
         display: block;
         position: absolute;
-        background: rgba(255, 99, 71, 0.37);
-        left: 47%;
-        top: calc(100% + -12px);
+        background: #201f1f0a;
+        left: 1%;
+        top: calc(100% + -2px);
         width: 0;
         height: 2px;
         transition: all .5s;
     }
     .men a:hover::before{
-        width: 50px;
-    }
+        width: 100%;
+    } */
 }
 #men--mod{
     display: flex;
@@ -322,7 +314,7 @@ p{
     .men a::before{
         content: "";
         display: block;
-        background-color: rgba(233, 97, 97, 0.39);
+        background-color: rgba(251, 251, 251, 0.81);
         position: absolute;
         left: 17%;
         top: calc(100% + -12px);
@@ -363,7 +355,6 @@ p{
         opacity: 1;
     }
     .submen li a:hover{
-        /* background-color: #eeeeee; */
         font-weight: 500;
         letter-spacing: 1.1px;
         border-radius: 0;
@@ -407,24 +398,9 @@ p{
     }
 }
 
-
-/*==============================
--> BANNER
-================================*/
-.banner{
-    border: 2px solid red;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    display: flex;
-    /* width: 100%; */
-    width: 300%;
-    height: auto;
-    background-position: center center;
-    overflow: hidden;
-}
-
-/*===== LOGO-MENÚ RESPONSIVE =====*/
+/*================================
+-> LOGO-MENÚ RESPONSIVE
+==================================*/
 .logo-men-responsive{
     margin-bottom: 2rem;
     position: relative;
@@ -470,7 +446,9 @@ p{
         background: none;
     }
 }
-/*-> === BOTON_MENU-REPONSIVE ===*/
+/*==================================
+-> BOTON_MENU-REPONSIVE
+====================================*/
 .btnMenu{
     display: flex;
     align-items: center;

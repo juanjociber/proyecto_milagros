@@ -18,7 +18,7 @@ export const menu = ()=>{
 			$sup.style='margin: 0 auto; transform: translateY(2px) rotate(-45deg)'
 			$center.style='margin: 0; width:0; opacity: 0'
 			$inf.style= 'margin: 0 auto; transform: translateY(-2px) rotate(45deg)'
-			$btnButton.style ='background:#F05454; font-weight:bold'
+			$btnButton.style ='font-weight:bold; transform:scale(1.2)'
 			contador = 0;
 		} else {
 			contador = 1;
@@ -39,7 +39,7 @@ export const menu = ()=>{
 		$sup.style = 'margin: 5px auto; transform: translateY(0px) rotate(0deg)';
 		$center.style ='margin: 0 auto; width:40%; opacity: 1';
 		$inf.style='margin: 5px auto; transform: translateY(0px) rotate(0deg)';
-		$btnButton.style ='font-weight:300';
+		$btnButton.style ='font-weight:bold; transition:.4s ease';
 		$nav.style.left='-100%';
 	};
 };
