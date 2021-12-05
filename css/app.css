@@ -1,5 +1,4 @@
 :root{
-    /* --bg-red: #f71735; */
     --bg-white: #ffffff;
     --bg-black: #000000;
     --color-text:#716b6caf;
@@ -351,10 +350,10 @@ section{
 }
 @keyframes shadow-pulse {
     0% {
-      box-shadow: 0 0 0 0 #716b6caf;
+      box-shadow: 0 0 0 0 #716b6caf !important;
     }
     100% {
-      box-shadow: 0 0 8px 16px rgba(79, 84, 84, 0);
+      box-shadow: 0 0 8px 16px rgba(79, 84, 84, 0) !important;
     }
   }
 
@@ -788,13 +787,11 @@ section{
 }
 .subtitle{
     grid-area: subtitle;
-    /* background-color: aquamarine; */
     text-align: center;
     padding: 2rem 0;
 }
 .column-left{/*contiene imagen*/
     grid-area: column-left;
-    /* background-color: greenyellow; */
     text-align: center;
 }
 .picture img{
@@ -809,7 +806,6 @@ section{
 .column-right{/*contiene textos*/
     grid-area: column-right;
     margin-bottom: 1rem;
-    /* background-color: violet; */
 }
 .list-container{
     grid-area: list-container;
@@ -863,7 +859,6 @@ section{
 -> SECTION 02: SERVICIOS
 ================================*/
 .section-2{
-    /* background:linear-gradient(120deg, #fdfbfbea 0%, #ebedeecd 100%); */
     background-color: #f7f7f7;
     padding: 12rem 0;
     overflow: hidden;
@@ -872,14 +867,11 @@ section{
     margin: 0 4rem 4rem 4rem;
 }
 .bottom-container{
-    /* border: 1px solid blue; */
     display: flex;
     width: 400%;
     animation: slider 40s infinite;
 }
 .box-container{
-    /* border: 1px solid red; */
-    /* margin: 0 2rem; */
     width: 100%;
     background-color: var(--bg-white);
     padding: 4rem;
