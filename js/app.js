@@ -49,15 +49,13 @@ export const menu = ()=>{
  * ================================================
  */
 export const submenu = ()=>{
-	const $btnSubmenu = document.querySelector('.btn-submenu'),
-		  $submen = document.querySelector('.submen'),
-		  $icoSubmenu = document.querySelector('#ico-submenu'),
+	const $btnSubmenu = document.querySelector('.submenu-btn'),
+		  $submen = document.querySelector('.children'),
 		  esDispositivoMovil = ()=> window.innerWidth <= 991;
 
 	$btnSubmenu.addEventListener('click',()=>{
 		if(esDispositivoMovil()){
-			$submen.classList.toggle('activo')
-			$icoSubmenu.classList.toggle('activo')
+			$submen.classList.toggle('activo')			
 		}
 	});
 };
@@ -129,23 +127,21 @@ export const slider =()=>{
 	banner()
 }
 
-export const SubmenuDesktop=()=>{
-	// const icoAngulo = document.querySelector('#icoAngulo')
-	const subMenu = document.querySelector('.submen')
-	const btnEntrenamiento = document.querySelector('#men--mod')
-	let mqMax767 = window.matchMedia('(max-width:767px)')
+// export const SubmenuDesktop=()=>{
+// 	const subMenu = document.querySelector('.btn-submenu')
+// 	let mqMax991 = window.matchMedia('(min-width:991px)')
 	
-	function mqSubmenu(mqMax767){
-    	if(mqMax767.matches){
-        	subMenu.style.display ='none'
-    	}
-    	else{
-        	subMenu.style.display='block'
-    	}
-	}
-	mqSubmenu(mqMax767)
-	mqMax767.addListener(mqSubmenu)
-}
+// 	function mqSubmenu(mqMax991){
+//     	if(mqMax991.matches){
+//         	subMenu.style.display ='none'
+//     	}
+//     	else{
+//         	subMenu.style.display='block'
+//     	}
+// 	}
+// 	mqSubmenu(mqMax991)
+// 	mqMax991.addListener(mqSubmenu)
+// }
 
 
 

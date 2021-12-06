@@ -109,9 +109,9 @@
                     </div>
                     <li><a href="index.html" class="selected">Inicio</a></li>
                     <li><a href="#">Nosotros</a>
-                    <li class="men__enlace--mod"><a class="btn-submenu" href="#">Servicios</a>
-                        <i class='bx bx-chevron-down' id="ico-submenu"></i>
-                        <ul class="submen">
+                    <li class="submenu">
+                        <a href="#" class="submenu-btn">Servicios<i class='bx bx-chevron-down'></i></a>
+                        <ul class="submen children">
                             <li><a href="#">Servicio 1</a></li>
                             <li><a href="#">Servicio 2</a></li>
                         </ul>
@@ -482,12 +482,11 @@
                     </div>
                     <div class="campo-footer contenedor">
                         <div class="items-footer">
-                            <ul class="items">
+                            <ul class="items footer-icons">
                                 <li><i class='bx bxl-facebook-square'></i><a href="#">facebook</a></li>
-                                <li><i class='bx bxl-instagram'></i><a href="#">instagram/a></li>
-                                <li><i class='bx bx-envelope'></i><a href="mailto:">correo</a>
-                                </li>
-                                <li><i class='bx bx-phone'></i><a href="#">#Telefónico</a></li>
+                                <li><i class='bx bxl-instagram'></i><a href="#">instagram</a></li>
+                                <li><i class='bx bx-envelope'></i><a href="mailto:">correo</a></li>
+                                <li><i class='bx bx-phone'></i><a href="#">Teléfono</a></li>
                             </ul>
                         </div>
                     </div>
@@ -501,7 +500,7 @@
     </footer>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script src="js/modulos.js" type="module"></script>
@@ -544,7 +543,6 @@
         });
 
 
-
 /**=======================================================
  *              NAVEGACIÓN ESTÁTICA
  =========================================================*/
@@ -565,6 +563,7 @@ function navegacionFija() {
     // Elemento a observar
     observer.observe(document.querySelector('#imagen'));
 };
+
 
 </script>
 
