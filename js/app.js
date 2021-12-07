@@ -55,7 +55,7 @@ export const submenu = ()=>{
 
 	$btnSubmenu.addEventListener('click',()=>{
 		if(esDispositivoMovil()){
-			$submen.classList.toggle('activo')			
+			$submen.classList.toggle('activo')
 		}
 	});
 };
