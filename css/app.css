@@ -6,6 +6,13 @@
     --fontOne:'Montserrat', sans-serif;
     --fontTwo:'Poppins', sans-serif;
 }
+.content .animate__bounceInDown{
+    animation-duration: 3s;
+}
+.content .animate__zoomIn{
+    animation-duration: 8s;
+}
+
 /*==============================
 -> RESET GLOBAL
 ================================*/
