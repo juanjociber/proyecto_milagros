@@ -1364,4 +1364,10 @@ section{
     .submenu .submenu-btn i{
         display: none;
     }
+    .fijo li a{
+        color: #342e2db3 !important;
+    }
+    .fijo .men a::before{
+        background-color: #342e2d21;
+    }
 }
