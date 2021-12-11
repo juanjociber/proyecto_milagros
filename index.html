@@ -281,60 +281,94 @@
                         Enim repellendus officia voluptatibus!</p>
                     </div>
                 </div>
-                <div class="wrap contenedor">
-                    <form action="" class="formulario">
-                    
-                        <input type="radio" name="filtro" id="todo" checked>
-                        <label for="todo">Todos</label>
-                        <input type="radio" name="filtro" id="amarillo">
-                        <label for="amarillo">Amarillo</label>
-                        <input type="radio" name="filtro" id="verde">
-                        <label for="verde">Verde</label>
-                        <input type="radio" name="filtro" id="azul">
-                        <label for="azul">Azul</label>
-                        
-                        <div id="imagenes" class="imagenes">
 
-                            
-                            <div class="img-container">
-                                <img class="borde-amarillo amarillo" src="img/silla1.jpg" alt="imagen">
-                                <div class="titulo">
-                                    <h4>Titulo 1</h4>
-                                    <div class="link">
-                                        <i class='bx bx-link'></i>
-                                    </div>
-                                </div>
+                <div class="container-post">
+                    <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+                    <input type="radio" id="SillaGamer" name="categories" value="SillaGamer">
+                    <input type="radio" id="SillaEscritorio" name="categories" value="SillaEscritorio">
+                    <input type="radio" id="SillaExterior" name="categories" value="SillaExterior">
+                    <input type="radio" id="ATP" name="categories" value="ATP">
+                    <input type="radio" id="fursys" name="categories" value="fursys">
+                    <input type="radio" id="VUE" name="categories" value="VUE">
+            
+                    <div class="container-category">
+                        <label for="TODOS">Todos</label>
+                        <label for="SillaGamer">Gamer Power</label>
+                        <label for="SillaEscritorio">Decorplas</label>
+                        <label for="SillaExterior">Copemo</label>
+                        <label for="ATP">ATP</label>
+                        <label for="fursys">Fursys</label>
+                        <label for="VUE">VUE</label>
+                    </div>
+            
+                    <div class="posts">
+            
+                        <div class="post" data-category="SillaEscritorio">
+                            <div class="ctn-img">
+                                <img src="img/silla1.jpg" alt="">
                             </div>
-                            <div class="img-container">
-                                <img class="borde-azul azul" src="img/silla9.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-verde verde" src="img/silla5.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-amarillo amarillo" src="img/silla3.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-verde verde" src="img/silla6.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-azul azul" src="img/silla7.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-amarillo amarillo" src="img/silla2.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-azul azul" src="img/silla8.jpg" alt="imagen">
-                            </div>
-                            <div class="img-container">
-                                <img class="borde-verde verde" src="img/silla4.jpg" alt="imagen">
-                            </div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Silla de Escritorio</li>
+                            </ul>
+                            <a href="articulo.html"><button>Leer más</button></a>
                         </div>
-                    </form>
-                </div>
+            
+                        <div class="post" data-category="SillaGamer">
+                            <div class="ctn-img"><img src="img/silla8.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Gamer Power</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+            
+                        <div class="post" data-category="SillaExterior">
+                            <div class="ctn-img"><img src="img/silla3.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Silla de Exterior</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+            
+                        <div class="post" data-category="fursys">
+                            <div class="ctn-img"><img src="img/silla4.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Fursys</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+            
+                        <div class="post" data-category="SillaEscritorio">
+                            <div class="ctn-img"><img src="img/silla5.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Silla de Escritorio</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+            
+                        <div class="post" data-category="ATP">
+                            <div class="ctn-img"><img src="img/silla6.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>ATP</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+            
+                        <div class="post" data-category="fursys">
+                            <div class="ctn-img"><img src="img/silla7.jpg" alt=""></div>
+                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                            <ul class="ctn-tag">
+                                <li>Fursys</li>
+                            </ul>
+                            <a href="#"><button>leer más</button></a>
+                        </div>
+                    </div>
         </section>
-
-        
 
         <section class="section-4" id="testimonio">
             <h2 class="subtitle">Testimoniales</h2>
@@ -447,8 +481,7 @@
         </div>
     </footer>
 
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.min.js"></script> -->
+    <!-- <script src="js/Plugins/jquery-3.2.1.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script src="js/modulos.js" type="module"></script>
@@ -456,14 +489,6 @@
 
 
     <script type="text/javascript">
-        /*const menuBtn = document.querySelector(".menu-btn");
-        const navigation = document.querySelector(".navigation")
-
-        menuBtn.addEventListener("click",()=>{
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
-        })*/
-
         const btns = document.querySelectorAll(".nav-btn");
         const slides = document.querySelectorAll(".imagen__slide");
         const contents = document.querySelectorAll(".content");
@@ -511,9 +536,8 @@ function navegacionFija() {
     // Elemento a observar
     observer.observe(document.querySelector('#imagen'));
 };
-
-
 </script>
+
 
 </body>
 </html>
