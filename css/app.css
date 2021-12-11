@@ -1,6 +1,7 @@
 :root{
     --bg-white: #ffffff;
     --bg-black: #000000;
+    --primario: #f71735;
     --color-text:#716b6caf;
     --col-text-titulo: #444444;
     --fontOne:'Montserrat', sans-serif;
@@ -155,7 +156,7 @@ section{
     z-index: 777;
     content: '';
     position: absolute;
-    background: rgba(0, 0, 0, 0.728);
+    background: rgba(0, 0, 0, 0.789);
     width: 100%;
     height: 100%;
     top: 0;
@@ -181,7 +182,8 @@ section{
 }
 .home .content h1 span{
     font-size: 4.5vw;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--primario);
 }
 @media(min-width:576px){
     .home .content h1{
@@ -191,6 +193,15 @@ section{
         font-size: 1.7rem;
     }
 }
+@media(min-width:768px){
+    .home .content h1{
+        font-size: 5rem;
+    }
+    .home .content h1 span{
+        font-size: 2.5rem;
+    }
+}
+
 .home .content p{
     margin-bottom: 65px;
     text-align: justify;
@@ -638,6 +649,9 @@ section{
     .men a:hover::before{
         width: 65%;
     }
+    .fijo .men a.selected{
+        color: var(--primario) !important;
+    }
     /*====================
     -> SUBMENÚ
     ======================*/
@@ -996,7 +1010,6 @@ input[type="radio"]{
         justify-content: center;
     }
 }
-
 .container-category label{
     text-align: center;
     padding: 15px 20px;
@@ -1010,6 +1023,7 @@ input[type="radio"]{
 }
 .container-category label:hover{
     opacity: 0.8;
+    color: var(--primario);
 }
 /*======================
 -> Post - Publicaciones
@@ -1532,7 +1546,12 @@ input[type="radio"]{
     .fijo li a{
         color: #342e2db3 !important;
     }
+    .fijo li a:hover{
+        color: var(--primario) !important;
+        font-weight: 300 !important;
+    }
+    
     .fijo .men a::before{
-        background-color: #342e2d21;
+        background-color: var(--primario);
     }
 }
