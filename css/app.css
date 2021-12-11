@@ -965,6 +965,161 @@ MAIN:
 .section-3{
     padding: 12rem 0;
 }
+/*=======================
+Contenedor de categorias
+=========================*/
+input[type="radio"]{
+    display: none;
+}
+.container-category{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+@media(min-width:576px){
+    .container-category{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(min-width:768px){
+    .container-category{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media(min-width:992px){
+    .container-category{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+@media(min-width:992px){
+    .container-category{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container-category label{
+    text-align: center;
+    padding: 15px 20px;
+    margin: 5px;
+    font-size: 1.6rem;
+    background: #f3f3f33b;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.082);
+    color: #7a7979;
+}
+.container-category label:hover{
+    opacity: 0.8;
+}
+/*======================
+-> Post - Publicaciones
+========================*/
+.container-post{
+    max-width: 1200px;
+    margin: auto;
+}
+.posts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.posts .post{
+    background: #fff;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.post .ctn-img{
+    width: 100%;
+}
+.post .ctn-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post h2{
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+.post span{
+    display: block;
+    margin-top: 10px;
+    padding: 0px 20px;
+}
+.ctn-tag{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 16px;
+    margin-top: 10px;
+}
+.ctn-tag li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 6px 10px;
+    background: #e8e8e8;
+    cursor: default;
+}
+.post button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #46a2fd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.post button:hover{
+    opacity: 0.9;
+}
+/*=====================
+-> sistema de filtrado
+=======================*/
+[value="TODOS"]:checked ~ .posts .post[data-category]{
+    display: block;
+}
+[value="SillaGamer"]:checked ~ .posts .post:not([data-category~="SillaGamer"]),
+[value="SillaEscritorio"]:checked ~ .posts .post:not([data-category~="SillaEscritorio"]),
+[value="SillaExterior"]:checked ~ .posts .post:not([data-category~="SillaExterior"]),
+[value="ATP"]:checked ~ .posts .post:not([data-category~="ATP"]),
+[value="fursys"]:checked ~ .posts .post:not([data-category~="fursys"]){
+    display: none;
+}
+
+[value="TODOS"]:checked ~ .container-category [for="TODOS"],
+[value="SillaGamer"]:checked ~ .container-category [for="SillaGamer"],
+[value="SillaEscritorio"]:checked ~ .container-category [for="SillaEscritorio"],
+[value="SillaExterior"]:checked ~ .container-category [for="SillaExterior"],
+[value="ATP"]:checked ~ .container-category [for="ATP"],
+[value="fursys"]:checked ~ .container-category [for="fursys"]{
+    /* background: #46a2fd; */
+    /* color: #fff; */
+    color: #444444;
+}
+@media screen and (max-width: 1200px){
+    .posts{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 900px){
+    .posts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 580px){
+    .posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 /*==============================
 -> SECTION 04
 ================================*/
