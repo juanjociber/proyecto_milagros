@@ -502,8 +502,8 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(80px);
-    margin-bottom: 12px;
+    transform: translateY(50px);
+    margin-bottom: 4px;
 }
 .slider-navigation .nav-btn{
     width: 12px;
