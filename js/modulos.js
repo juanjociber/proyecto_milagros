@@ -1,15 +1,16 @@
-import {menu,submenu,logo,cambioColor,slider,funcionTestimonio, funcionFlechas} from "./app.js";
+import {menu,submenu,logo,cambioColor,slider,funcionTestimonio, funcionFlechas, sliderHeader, modalNavegation, generadorConteo, progressMaster} from "./app.js";
 
 menu()
 submenu()
 logo()
 cambioColor()
 slider()
-// SubmenuDesktop()
+sliderHeader()
 funcionTestimonio()
 funcionFlechas()
-
-
+modalNavegation()
+generadorConteo()
+progressMaster()
 
 
 

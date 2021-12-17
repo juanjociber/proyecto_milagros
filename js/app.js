@@ -271,66 +271,10 @@ function Prev(){
 $btnLeft.addEventListener('click',function(){
     Prev();
 })
-
 }
-
-/**======================================
- * -> FORMULARIO
- ========================================*/
 /**==============================================
- * VALIDANDO Y LIMPIANDO FORMULARIO
+ * FLECHAS
  ================================================*/
- export const funcionValidarFormulario=()=>{
-
-	function validarFormulario(){
-		let nomForm = document.forms["formulario"]["nombre"].value;
-			if ( nomForm == null || nomForm == "" || nomForm.length == 0  || /^\s+$/.test(nomForm) || !isNaN(nomForm) ) {
-			const $nombre = document.querySelector('#idMNombre')
-			$nombre.classList.add('msj-formulario')
-			mostrarMensaje($nombre)
-			$nombre.innerHTML='El campo es obligatorio y solo texto'
-			removeMensaje($nombre)
-			document.querySelector("#nombre").focus();
-			return false;
-		}
-	
-		let apeForm = document.forms["formulario"]["apellido"].value;
-			if ( apeForm == null || apeForm == "" || apeForm.length == 0  || /^\s+$/.test(apeForm) || !isNaN(apeForm) ) {
-			const $apellido = document.querySelector('#idMApellido')
-			$apellido.classList.add('msj-formulario')
-			mostrarMensaje($apellido)
-			$apellido.innerHTML='El campo es obligatorio y solo texto'
-			removeMensaje($apellido)
-			document.querySelector("#apellido").focus();
-			return false;
-		}
-	
-		let emailForm = document.forms["formulario"]["email"].value;
-			if( emailForm== null || emailForm == "" || emailForm.length == 0 || (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(emailForm)) || !isNaN(emailForm)) {
-			const $mail = document.querySelector('#idMEmail')
-			$mail.classList.add('msj-formulario')
-			mostrarMensaje($mail)
-			$mail.innerHTML='El campo es obligatorio y formato establecido'
-			removeMensaje($mail)
-			document.querySelector("#email").focus();
-			return false;
-		}
-	
-		let celularForm = document.forms["formulario"]["celular"].value;
-			if( isNaN(celularForm) || celularForm == null || celularForm == "" || celularForm.length == 0 || /^\s+$/.test(celularForm)){
-			const $celular = document.querySelector('#idMCelular')
-			$celular.classList.add('msj-formulario')
-			mostrarMensaje($celular)
-			$celular.innerHTML='El campo es obligatorio y solo número'
-			removeMensaje($celular)
-			document.querySelector("#celular").focus();
-			return false;
-		}
-	}
-	validarFormulario();
- }
- 
-
 export const funcionFlechas=()=>{
 	let flechaizq = document.querySelector('#prev')
         let flechader = document.querySelector('#next')
@@ -347,3 +291,151 @@ export const funcionFlechas=()=>{
     })
 }
   
+/**==============================================
+ * SLIDERHEADER - RECEPTIVO
+ ================================================*/
+export const sliderHeader = ()=>{
+	const btns = document.querySelectorAll(".nav-btn");
+	const slides = document.querySelectorAll(".imagen__slide");
+	const contents = document.querySelectorAll(".content");
+
+	var sliderNav = function(manual){
+		btns.forEach((btn)=>{
+			btn.classList.remove("active");
+		})
+	
+		slides.forEach((slide)=>{
+			slide.classList.remove("active");
+		})
+	
+		contents.forEach((content)=>{
+			content.classList.remove("active");
+		})
+
+		btns[manual].classList.add("active");
+		slides[manual].classList.add("active");
+		contents[manual].classList.add("active");
+	}
+
+	btns.forEach((btn, i) => {
+		btn.addEventListener("click",()=>{
+			sliderNav(i);
+		})
+	});
+}
+
+/**=======================================================
+*              NAVEGACIÓN ESTÁTICA
+=========================================================*/
+export const observerHeader=()=>{
+	document.addEventListener('DOMContentLoaded', function() {
+		navegacionFija();
+	});
+
+	function navegacionFija() {
+		const barra = document.querySelector('#header');
+		const observer = new IntersectionObserver( function(entries) {
+			if(entries[0].isIntersecting) {
+				console.log(barra)
+				barra.classList.remove('fijo')
+			} else {
+				barra.classList.add('fijo')
+			}
+		});
+		// Elemento a observar
+		observer.observe(document.querySelector('#imagen'));
+	};
+}
+
+/**=======================================================
+*              MODAL-NAVEGACION
+=========================================================*/
+export const modalNavegation=()=>{
+	//VARIABLES
+	const btnCierra = document.querySelector('#btn-cierra');
+	const btnAdelanta = document.querySelector('#btn-adelanta');
+	const btnRetrocede = document.querySelector('#btn-retrocede');
+	const imagenesTarjetas = document.querySelectorAll('#imagenes-tarjetas img');
+	const lightbox = document.querySelector('#ligthbox-contenedor');
+	const imagenActiva = document.querySelector('#img-activa');
+
+	let indiceImagen = 0;
+	//ABRIENDO LIGHTBOX
+	const abreLightbox = (event) =>{
+		imagenActiva.src = event.target.src;
+		lightbox.style.display= 'flex';
+		indiceImagen = Array.from(imagenesTarjetas).indexOf(event.target);
+	};
+	imagenesTarjetas.forEach((imagen)=>{
+		imagen.addEventListener('click',abreLightbox);
+	});
+
+	//BÓTON CERRAR
+	btnCierra.addEventListener('click',()=>{
+		lightbox.style.display= 'none';
+	});
+
+	//BOTÓN SIGUIENTE
+	const adelantaImagen = () =>{
+		if(indiceImagen === imagenesTarjetas.length -1){
+			indiceImagen = -1;
+		}
+		imagenActiva.src = imagenesTarjetas[indiceImagen + 1].src
+		indiceImagen++;
+	};
+	btnAdelanta.addEventListener('click',adelantaImagen);
+
+	//BOTÓN ANTERIOR
+	const retrocedeImagen = () =>{
+		if(indiceImagen === 0){
+			indiceImagen = imagenesTarjetas.length;
+		}
+		imagenActiva.src = imagenesTarjetas[indiceImagen - 1].src;
+		indiceImagen--;
+	};
+	btnRetrocede.addEventListener('click',retrocedeImagen);
+}
+
+/**=======================================================
+*              GENERADOR CONTEO
+=========================================================*/
+export const generadorConteo = ()=>{
+	function contar() {
+		let contador = document.getElementById('txt'); 
+		if(contador.innerHTML < 20)
+		contador.innerHTML = cuenta++;
+		setTimeout(contar, 100);
+	}
+	var cuenta = 0;
+	contar();
+
+	function contara() {
+		let conta = document.getElementById('txt-clientes'); 
+		if(conta.innerHTML < 250)
+		conta.innerHTML = acumulador++;
+		setTimeout(contara, 80);
+	}
+	var acumulador = 0;
+	contara();
+}
+
+/**=======================================================
+*              PROGRESSBAR
+=========================================================*/
+export const progressMaster=()=>{
+	function progress(){
+		var el = document.getElementById('progress');
+		var width = 1;
+
+		var id = setInterval(frame,60);
+		function frame(){
+			if(width>=79){
+				clearInterval(id);
+			}else{
+				width++;
+				el.style.width = width + '%';
+			}
+		}
+	}
+	progress()
+}
