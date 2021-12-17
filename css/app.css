@@ -2014,7 +2014,7 @@ input[type="radio"]{
     color: rgba(255, 255, 255, 0.694);
     font-weight: 300;
     font-size: 1.4rem;
-    padding: 10px 12px;
+    padding: 15px 10px;
     border-radius: 4px;
     outline: unset;
     transition: box-shadow ease .4s;
@@ -2026,8 +2026,8 @@ input[type="radio"]{
 .footer-input i{
     position: absolute;
     right: 3px;
-    top: 5px;
-    padding: 8px;
+    top: 4px;
+    padding: 12px;
     border-radius: 3px;
     background: var(--gm-Red-700);
     cursor: pointer;
