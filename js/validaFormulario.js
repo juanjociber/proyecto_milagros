@@ -25,7 +25,7 @@
     }
 
     let emailForm = document.forms["formulario"]["email"].value;
-        if( emailForm== null || emailForm == "" || emailForm.length == 0 || (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(emailForm)) || !isNaN(emailForm)) {
+        if( emailForm== null || emailForm == "" || emailForm.length == 0 || (/\w.%+([-+.']\w+)*@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/.test(emailForm)) || !isNaN(emailForm)) {
         const $mail = document.querySelector('#idMEmail')
         $mail.classList.add('msj-formulario')
         mostrarMensaje($mail)
