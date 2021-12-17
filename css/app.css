@@ -418,7 +418,7 @@ section{
 .home .content{
     z-index: 888;
     color: var(--gm-white-50);
-    width: 90%;
+    width: 95%;
     margin-top: 50px;
     display: none;
 }
