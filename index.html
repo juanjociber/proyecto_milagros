@@ -196,7 +196,7 @@
                             <div class="icon-container">
                                 <i class='bx bx-shopping-bag'></i>
                             </div>
-                            <div class="link-container">
+                            <div class="link-container link-container--titulo">
                                 <a href="#">Business Services</a>
                             </div>
                             <div class="text-container">
@@ -213,7 +213,7 @@
                             <div class="icon-container">
                                 <i class='bx bx-shopping-bag'></i>
                             </div>
-                            <div class="link-container">
+                            <div class="link-container link-container--titulo">
                                 <a href="#">Business Services</a>
                             </div>
                             <div class="text-container">
@@ -230,7 +230,7 @@
                             <div class="icon-container">
                                 <i class='bx bx-shopping-bag'></i>
                             </div>
-                            <div class="link-container">
+                            <div class="link-container link-container--titulo">
                                 <a href="#">Business Services</a>
                             </div>
                             <div class="text-container">
@@ -247,7 +247,7 @@
                             <div class="icon-container">
                                 <i class='bx bx-shopping-bag'></i>
                             </div>
-                            <div class="link-container" style="padding: 0.5rem;">
+                            <div class="link-container link-container--titulo" style="padding: 0.5rem;">
                                 <a href="#">Business Services</a>
                             </div>
                             <div class="text-container">
@@ -269,9 +269,33 @@
 
         <!--PARALLAX-->
         <div class="parallax">
-            <div class="fondo-parallax" id="parallaxOne">
+            <div class="fondo-parallax fondo-parallax--mod" id="parallaxOne">
                 <p class="fondo-parallax__texto" id="idparallax-texto"></p>
+                <div class="pgbar-container">
+                    <div class="pgbar">
+                        <div id="txt-clientes"></div>
+                        <h5>Clientes Satisfechos</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Fuga ullam tempore voluptates numquam commodi. </p>
+                    </div>
+                    <div class="pgbar">
+                        <div id="txt"></div>
+                        <h5>Agentes Profesionales</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Fuga ullam tempore voluptates numquam commodi. </p>
+                    </div>
+                    <div class="progressbar pgbar">
+                        <div class="progressbar-etiquetas">
+                            <small>Progreso 1</small>
+                            <small>79%</small>
+                        </div>
+                        <div id="progress-0"></div>
+                    </div>
+                </div>
+                <div class="corte" style="height: 150px; width: 100%; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.94,109.05 C150.00,150.00 356.84,149.51 502.45,104.11 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+
             </div>
+
         </div>
         
         <section class="section-3">
@@ -535,43 +559,62 @@
             </div>
         </section>
     </main>
+
+
   
     <footer>
-        <div class="footer-informe">
-            <div class="fondo-footer">
-                <div class="campos-footer">
-                    <div class="campo-footer contenedor">
-                        <div class="logo-footer">
-                            <a href="index.html"><img src="" alt="logo"></a>
+        <div class="footer">
+                <div class="footer-campos">
+                    <div class="footer-campo contenedor">
+                        <h4>Sobre nosotros</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Culpa suscipit magni,ducimus exercitationem.</p>
+                        <div class="items-sociales">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="footer-input">
+                            <input type="email" placeholder="Ingrese su correo aquí">
+                            <i class='bx bx-navigation'></i>
                         </div>
                     </div>
-                    <div class="campo-footer contenedor">
-                        <div class="items-footer">
-                            <ul class="items items--mod">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Nosotros</a></li>
-                                <li><a href="#">Servicios</a></li>
-                                <li><a href="#">Proyectos</a></li>
-                                <li><a href="#">Contáctenos</a></li>
-                            </ul>
-                        </div>
+
+                    <div class="footer-campo contenedor">
+                        <h4>Servicios</h4>
+                        <ul class="items-servicios">
+                            <li>&check; Servicio 1</li>
+                            <li>&check; Servicio 2</li>
+                            <li>&check; Servicio 3</li>
+                            <li>&check; Servicio 4</li>
+                        </ul>
                     </div>
-                    <div class="campo-footer contenedor">
-                        <div class="items-footer">
-                            <ul class="items footer-icons">
-                                <li><i class='bx bxl-facebook-square'></i><a href="#">facebook</a></li>
-                                <li><i class='bx bxl-instagram'></i><a href="#">instagram</a></li>
-                                <li><i class='bx bx-envelope'></i><a href="mailto:">correo</a></li>
-                                <li><i class='bx bx-phone'></i><a href="#">Teléfono</a></li>
-                            </ul>
-                        </div>
+
+                    <div class="footer-campo contenedor">
+                        <h4>Publicaciones recientes</h4>
+                        <ul class="items-publicaciones">
+                            <li>Publicación 1</li>
+                            <li>Publicación 2</li>
+                            <li>Publicación 3</li>
+                            <li>Publicación 4</li>
+                        </ul>
                     </div>
-                    <div class="campo-footer contenedor">
-                        <small class="copyrigth">Copyrigth &copy; 2021 <!--Christraining | Diseñado y Desarrollado por: <a
-                                class="autor" href="tel:+953659803">Juan J. Huiza</a>--></small>
+
+                    <div class="footer-campo contenedor">
+                        <h4>Contacta con nosotros</h4>
+                        <p class="contactar">Dirección</p>
+                        <p class="contactar-detalle">Jr. Dirección S/N</p>
+                        <p class="contactar">Teléfono</p>
+                        <p class="contactar-detalle">505 050 505</p>
+                        <p class="contactar">Email</p>
+                        <p class="contactar-detalle">example@dominio.com</p>
+                    </div>
+                 
+                    <div class="footer-campo contenedor">
+                        <small class="copyrigth">Copyrigth &copy; 2021 | Diseñado y Desarrollado por: <a
+                                class="autor" href="tel:+953659803">Juan J. Huiza</a></small>
                     </div>
                 </div>
-            </div>
         </div>
     </footer>
 
@@ -672,6 +715,48 @@
         indiceImagen--;
     };
     btnRetrocede.addEventListener('click',retrocedeImagen);
+    </script>
+
+    <script>
+        function show_progress(i) {
+        var progress1 = i;
+        var progress2 = progress1 + 1;
+        var progress3 = progress1 + 1;
+
+        var magic = "linear-gradient(to right, red " + progress1 + "% , red " + progress2 + "% , #FFF " + progress3 + "%)";
+        document.getElementById("progress-0").style.background = magic;
+        }
+        function timeout() {
+            t = setTimeout(function() {
+                show_progress(t)
+                timeout();
+            }, 50);
+        if (t == 79) {
+            clearTimeout(t);
+        }
+        console.log(t);
+    }
+    timeout();
+    </script>
+    <script>
+        function contar() {
+            let contador = document.getElementById('txt'); 
+            if(contador.innerHTML < 20)
+            contador.innerHTML = cuenta++;
+            setTimeout(contar, 100);
+        }
+        var cuenta = 0;
+        contar();
+    
+        function contara() {
+            let conta = document.getElementById('txt-clientes'); 
+            if(conta.innerHTML < 250)
+            conta.innerHTML = acumulador++;
+            setTimeout(contara, 80);
+        }
+        var acumulador = 0;
+        contara();
+    
     </script>
 
 </body>
