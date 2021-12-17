@@ -1998,7 +1998,7 @@ input[type="radio"]{
     color: rgba(255, 255, 255, 0.694);
     font-weight: 300;
     font-size: 1.4rem;
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: 4px;
     outline: unset;
     transition: box-shadow ease .4s;
@@ -2010,7 +2010,7 @@ input[type="radio"]{
 .footer-input i{
     position: absolute;
     right: 3px;
-    top: 3px;
+    top: 5px;
     padding: 8px;
     border-radius: 3px;
     background: var(--gm-Red-700);
@@ -2031,7 +2031,9 @@ input[type="radio"]{
         padding: 11.5px 16px;
     }
     .footer-input i{
-       padding: 10px;
+        top: 5px;
+        right: 5px;
+        padding: 10px;
     }
 }
 .items-sociales a i:hover{
