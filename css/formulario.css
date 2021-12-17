@@ -350,6 +350,19 @@ textarea{
   transform: scale(0.99);
   opacity: 0.8;
 }
+@media(min-width:576px){
+  .btn{
+    width: 30%;
+  }
+  .boton-formulario i{
+    left: 41%;
+  }
+}
+@media(min-width:768px){
+  .btn{
+    width: 25%;
+  }
+}
 @keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 0 0 #7e7e7eaf;
@@ -377,13 +390,28 @@ textarea{
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
   }
+  .campo:nth-child(1){
+    grid-column: 1 / 2;
+  }
   .campo:nth-child(2){
     grid-column: 2 / 3;
+  }
+  .campo:nth-child(3){
+    grid-column: 1 / 2;
+  }
+  .campo:nth-child(5){
+    grid-column: 1 / 3;
   }
 }
 @media(min-width:992px){
   .contactenos-formulario{
     width: 50%;
+  }
+  .btn{
+    width: 40%;
+  }
+  .boton-formulario i{
+    left: 40%;
   }
   .contenedor-campos{
     display: initial;
@@ -392,6 +420,9 @@ textarea{
 @media(min-width:1200px){
   .contactenos-formulario{
     width: 35%;
+  }
+  .boton-formulario i{
+    left: 38%;
   }
 }
 
