@@ -429,3 +429,29 @@ textarea{
 }
 
 
+#idMNombre,
+#idMApellido,
+#idMEmail,
+#idMCelular,
+#idMEntrenamiento,
+#idMModalidad,
+#idMFrecuencia{
+    grid-column: 1 / 3;
+    display: none;
+}
+.msj-formulario{
+    color: red;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+}
+@media(min-width:576px){
+    .msj-formulario{
+        font-size: 1.1rem;
+    }
+}
+@media(min-width:1200px){
+    .msj-formulario{
+        font-size: 1rem;
+    }
+    
+}

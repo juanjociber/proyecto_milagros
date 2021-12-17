@@ -1835,6 +1835,20 @@ input[type="radio"]{
         background-color: var(--gm-Red-200);
     }
 }
+/*===============
+-> PROGRESSBAR
+=================*/
+#progressContainer{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+#progress{
+    width: 1%;
+    height: 15px;
+    background-color: #ff0000;
+}
+
 .pgbar-container{
     text-align: center;
     
@@ -1862,44 +1876,9 @@ input[type="radio"]{
     justify-content: space-between;
     padding: 0.5rem;
 }
-
 .progressbar{
     margin: 2rem;
     color: var(--gm-White-100);
-
-}
-#progress-0 {
-    /* width: 500px; */
-    background: #999;
-    text-align: center;
-    border-radius: 10px;
-    padding: 0.5rem 0;
-}
-#progress-1 {
-    border: 1px solid black;
-    width: 500px;
-    background: #999;
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-#progress-2 {
-    border: 1px solid black;
-    width: 500px;
-    background: #999;
-    text-align: center;
-    margin-top: 10px;
-    /* color: #FF7043; */
-}
-#progress-3 {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    background: #999;
-    line-height: 100px;
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 200px;
 }
 .corte{
     display: none;
@@ -2071,3 +2050,5 @@ input[type="radio"]{
     font-weight: 700;
     margin-bottom: 2.5rem;
 }
+
+
