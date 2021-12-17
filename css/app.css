@@ -514,7 +514,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(70px);
+    transform: translateY(80px);
     margin-bottom: 4px;
 }
 .slider-navigation .nav-btn{
