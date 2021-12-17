@@ -418,9 +418,14 @@ section{
 .home .content{
     z-index: 888;
     color: var(--gm-white-50);
-    width: 75%;
+    width: 90%;
     margin-top: 50px;
     display: none;
+}
+@media(min-width:576px){
+    .home .content{
+        width: 75%;
+    }
 }
 .home .content.active{
     display: block;
@@ -469,13 +474,20 @@ section{
     border-radius: 2.5px;
 }
 .home .media-icons{
-    z-index: 888;
-    position: absolute;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s ease;
+    display: none;
 }
+@media(min-width:576px){
+    .home .media-icons{
+        display: block;
+        z-index: 888;
+        position: absolute;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s ease;
+    }
+}
+
 .home .media-icons a{
     color: var(--gm-white-50);
     font-size: 3rem;
